@@ -58,7 +58,7 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/files_5363394-1752777948514-LOGO.png" 
+                src="/freepik_assistant_1756145988589.png" 
                 alt="AguiarT.I Logo" 
                 className="h-16 w-auto"
               />
@@ -502,7 +502,7 @@ function App() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <img 
-                  src="/files_5363394-1752777948514-LOGO.png" 
+                  src="/freepik_assistant_1756145988589.png" 
                   alt="AguiarT.I Logo" 
                   className="h-12 w-auto"
                 />
