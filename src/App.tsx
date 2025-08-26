@@ -15,7 +15,9 @@ import {
   Database,
   Cloud,
   Settings,
-  MessageCircle
+  MessageCircle,
+  Facebook,
+  Instagram
 } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
@@ -56,12 +58,32 @@ function App() {
       <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-4">
               <img 
-                src="/freepik_assistant_1756145988589.png" 
+                src="/LOGO.png" 
                 alt="AguiarT.I Logo" 
                 className="h-16 w-auto"
               />
+              <div className="flex items-center space-x-2">
+                <a
+                  href="https://www.facebook.com/aguiartiad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-full transition-all duration-200"
+                  aria-label="Facebook da AguiarT.I"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/aguiar_ti/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 text-pink-600 hover:text-pink-700 hover:bg-pink-50 rounded-full transition-all duration-200"
+                  aria-label="Instagram da AguiarT.I"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
             </div>
             
             {/* Desktop Navigation */}
@@ -500,12 +522,32 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center space-x-4 mb-4">
                 <img 
-                  src="/freepik_assistant_1756145988589.png" 
+                  src="/LOGO.png" 
                   alt="AguiarT.I Logo" 
                   className="h-12 w-auto"
                 />
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="https://www.facebook.com/aguiartiad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 text-blue-400 hover:text-blue-300 hover:bg-gray-800 rounded-full transition-all duration-200"
+                    aria-label="Facebook da AguiarT.I"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/aguiar_ti/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 text-pink-400 hover:text-pink-300 hover:bg-gray-800 rounded-full transition-all duration-200"
+                    aria-label="Instagram da AguiarT.I"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </div>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
                 Transformando negócios através de soluções tecnológicas inovadoras. Automação comercial e serviços de TI de qualidade.
