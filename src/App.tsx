@@ -60,7 +60,7 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
               <img 
-                src="/LOGO.png" 
+                src="/LOGO copy copy copy copy.png" 
                 alt="AguiarT.I Logo" 
                 className="h-16 w-auto"
               />
@@ -524,7 +524,7 @@ function App() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-4 mb-4">
                 <img 
-                  src="/LOGO.png" 
+                  src="/LOGO copy copy copy copy.png" 
                   alt="AguiarT.I Logo" 
                   className="h-12 w-auto"
                 />
