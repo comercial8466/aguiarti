@@ -548,6 +548,15 @@ function App() {
                     <Instagram className="h-5 w-5" />
                   </a>
                   <a
+                    href="https://wa.me/5551996668646?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20AguiarT.I"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 text-green-600 hover:text-green-700 hover:bg-green-50 rounded-full transition-all duration-200"
+                    aria-label="WhatsApp da AguiarT.I"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                  </a>
+                  <a
                     href="https://wa.me/5551996668646"
                     target="_blank"
                     rel="noopener noreferrer"
