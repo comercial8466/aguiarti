@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, AlertCircle, MessageCircle, ExternalLink } from 'lucide-react';
+import { ArrowRight, CheckCircle, AlertCircle, ExternalLink } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { EMAIL_CONFIG } from '../utils/emailConfig';
 
@@ -34,9 +34,7 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'config-error'>('idle');
 
   const openWhatsApp = () => {
-    const phoneNumber = '5551996668646';
-    const message = `Olá! Meu nome é ${formData.name || '[Nome]'}${formData.company ? ` da empresa ${formData.company}` : ''}. ${formData.message || 'Gostaria de saber mais sobre os serviços da AguiarT.I'}`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = 'https://api.whatsapp.com/send?phone=5551996668646&text=Gostaria de saber mais sobre os serviços AguiarT.I';
     window.open(whatsappUrl, '_blank');
   };
 
@@ -339,7 +337,11 @@ export default function ContactForm() {
             onClick={openWhatsApp}
             className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
           >
-            <MessageCircle className="h-4 w-4" />
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+              alt="WhatsApp" 
+              className="h-4 w-4"
+            />
             WhatsApp
           </button>
         </div>

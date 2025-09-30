@@ -15,7 +15,6 @@ import {
   Database,
   Cloud,
   Settings,
-  MessageCircle,
   Facebook,
   Instagram
 } from 'lucide-react';
@@ -37,9 +36,7 @@ function App() {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = '5551996668646'; // Número com código do país
-    const message = 'Olá! Gostaria de saber mais sobre os serviços da AguiarT.I';
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = 'https://api.whatsapp.com/send?phone=5551996668646&text=Gostaria de saber mais sobre os serviços AguiarT.I';
     window.open(whatsappUrl, '_blank');
   };
 
@@ -51,7 +48,11 @@ function App() {
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         aria-label="Falar no WhatsApp"
       >
-        <MessageCircle className="h-6 w-6" />
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+          alt="WhatsApp" 
+          className="h-6 w-6"
+        />
       </button>
 
       {/* Header */}
@@ -180,7 +181,11 @@ function App() {
                 onClick={openWhatsApp}
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
-                <MessageCircle className="h-5 w-5" />
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                  alt="WhatsApp" 
+                  className="h-5 w-5"
+                />
                 Falar no WhatsApp
               </button>
             </div>
@@ -449,7 +454,11 @@ function App() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <MessageCircle className="h-6 w-6 text-green-600 mt-1" />
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                    alt="WhatsApp" 
+                    className="h-6 w-6 mt-1"
+                  />
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
                     <button 
@@ -505,7 +514,11 @@ function App() {
                   onClick={openWhatsApp}
                   className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
                 >
-                  <MessageCircle className="h-6 w-6" />
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                    alt="WhatsApp" 
+                    className="h-6 w-6"
+                  />
                   Falar no WhatsApp Agora
                 </button>
               </div>
@@ -563,7 +576,11 @@ function App() {
                   </a>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <MessageCircle className="h-5 w-5 text-green-400" />
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                    alt="WhatsApp" 
+                    className="h-5 w-5"
+                  />
                   <button 
                     onClick={openWhatsApp}
                     className="text-gray-400 hover:text-green-400 transition-colors"
