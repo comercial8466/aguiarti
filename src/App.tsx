@@ -229,7 +229,7 @@ function App() {
                   Emissão de notas fiscais
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <CheckCircle className="h-6 w-6 text-green-400" />
                   Venda e Manutenção de Balanças (Checkouts e Atendimento/Balcão)  
                 </li>
               </ul>
