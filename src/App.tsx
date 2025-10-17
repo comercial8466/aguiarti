@@ -252,8 +252,8 @@ function App() {
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500" />
                   Configuração de redes
-                  
-                </li className="flex items-center gap-2">
+              </li>
+                <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500" />
                   Monitoramento de Redes, Desktop e Servidores 
               </li>
