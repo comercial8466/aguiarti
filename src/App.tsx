@@ -283,11 +283,8 @@ function App() {
                   Backup e segurança
                 </li>
                  <li className="flex items-center gap-2">
-                  <CheckCircle className="h-100 w-100 text-green-500" />
-                  Oferecemos a venda de uma ampla gama de equipamentos de TI, incluindo:
-Computadores e Servidores: Soluções completas para ambientes de trabalho e data centers.
-Switches: Modelos gerenciáveis e não gerenciáveis, adequados para redes de todos os tamanhos.
-Roteadores: Equipamentos de fabricantes como Mikrotik, além de outras marcas líderes de mercado. 
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  Venda de computadores e servidores
                  </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500" />
