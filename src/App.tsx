@@ -258,7 +258,7 @@ function App() {
                   Monitoramento de Redes, Desktop e Servidores 
               </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-7 w-7 text-green-500" />
+                  <CheckCircle className="h-10 w-10 text-green-500" />
                    implantação de switches e roteadores com as melhores marcas do mercado
               </li>
                 <li className="flex items-center gap-2">
