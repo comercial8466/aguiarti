@@ -251,7 +251,7 @@ function App() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  Configuração de redes
+                 Implantação e Configurações de redes
               </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-6 w-6 text-green-500" />
