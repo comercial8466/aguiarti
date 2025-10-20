@@ -297,7 +297,7 @@ Switch Layer 3 com 24 portas Gigabit, suporte a VLAN e roteamento.
                   </li>
                 
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-20 w-20 text-green-500" />
+                  <CheckCircle className="h-17 w-17 text-green-500" />
                    MikroTik CRS328-24P-4S+RM
 Switch gerenciável com PoE, 24 portas Gigabit, 4 portas SFP+ e roteamento.
                   </li>
