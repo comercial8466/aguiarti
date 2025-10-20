@@ -250,7 +250,7 @@ function App() {
                   Manutenção de sistemas e hardware
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-7 w-7 text-green-500" />
+                  <CheckCircle className="h-8 w-8 text-green-500" />
                  Implantação e Configurações de redes de Computadores
               </li>
                 <li className="flex items-center gap-2">
