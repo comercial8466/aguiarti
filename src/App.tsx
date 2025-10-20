@@ -262,6 +262,10 @@ function App() {
                    implantação de switches e roteadores com as melhores marcas do mercado
               </li>
                 <li className="flex items-center gap-2">
+                  <CheckCircle className="h-6 w-6 text-green-500" />
+                   Garantia, segurança e qualidade para a sua rede de computadores e servidores. Proteja seus ativos com soluções confiáveis e eficientes
+              </li>
+                <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500" />
                   Suporte remoto 24/7
                 </li>
