@@ -306,12 +306,18 @@ Switch gerenciável com PoE, 24 portas Gigabit, 4 portas SFP+ e roteamento.
                   <CheckCircle className="h-12 w-12 text-green-500" />
                    MikroTik CCR1009-7G-1C-1S+
 Roteador de alta performance com até 9 portas Gigabit, roteamento avançado.
-
                   </li>
+
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-12 w-12 text-green-500" />
+                   MikroTik CCR1072-1G-8S+
+Roteador de alta performance com 72 núcleos, ideal para ISPs e grandes infraestruturas.
+                  </li>
+                
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-6 w-6 text-green-500" />
                   Monitoramento 24/7
-                </li>
+                </li>                
               </ul>
             </div>
 
