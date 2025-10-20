@@ -287,11 +287,11 @@ function App() {
                   Venda de Notebook, Computadores e Servidores
                  </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
+                  <CheckCircle className="h-11 w-11 text-green-500" />
                   Venda e implantação de switches e roteadores com as melhores marcas do mercado 
                   </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
+                  <CheckCircle className="h-11 w-11 text-green-500" />
                    Consulte-nos para soluções personalizadas que atendam às suas necessidades 
                   </li>
                 <li className="flex items-center gap-2">
