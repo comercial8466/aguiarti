@@ -246,15 +246,15 @@ function App() {
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500" />
                   Manutenção de hardware
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500" />
                   Configuração de redes
               </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500" />
                   Monitoramento de Redes, Desktop e Servidores 
               </li>
                 <li className="flex items-center gap-2">
