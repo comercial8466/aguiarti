@@ -287,11 +287,11 @@ function App() {
               </p>
               <ul className="space-y-2 text-gray-500">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-5 text-green-500" />
                   Servidores e storage
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-5 text-green-500" />
                   Backup e segurança
                 </li>
                  <li className="flex items-center gap-2">
