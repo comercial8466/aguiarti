@@ -285,7 +285,7 @@ function App() {
               <p className="text-gray-600 mb-6">
                 Planejamento e implementação de infraestrutura tecnológica robusta e segura.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-500">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-green-500" />
                   Servidores e storage
