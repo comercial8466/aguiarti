@@ -295,7 +295,7 @@ function App() {
                   Backup e segurança
                 </li>
                  <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-5 text-green-500" />
+                  <CheckCircle className="h-6 w-6 text-green-500" />
                   Venda de Notebook, Computadores e Servidores
                  </li>
                 <li className="flex items-center gap-2">
