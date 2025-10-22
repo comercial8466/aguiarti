@@ -262,7 +262,7 @@ function App() {
                    implantação de switches e roteadores com as melhores marcas do mercado
               </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
+                  <CheckCircle className="h-7 w-7 text-green-500" />
                    Garantia, segurança e qualidade para a sua rede de computadores e servidores
               </li>
                 <li className="flex items-center gap-2">
