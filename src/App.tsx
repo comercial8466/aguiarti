@@ -307,7 +307,7 @@ function App() {
                    Consulte-nos para soluções personalizadas que atendam às suas necessidades 
                   </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500" />
                   Monitoramento 24/7
                 </li>                
               </ul>
