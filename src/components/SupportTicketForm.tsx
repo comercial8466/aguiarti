@@ -306,7 +306,7 @@ export default function SupportTicketForm() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
             >
               <option value="">Selecione uma categoria</option>
-              <option value="hardware">Hardware - Computadores, impressoras</option>
+              <option value="hardware">Hardware - Computadores, Servidores</option>
               <option value="software">Software - Sistemas, aplicativos</option>
               <option value="network">Rede - Internet, conectividade</option>
               <option value="pdv">PDV - Sistema de vendas</option>
