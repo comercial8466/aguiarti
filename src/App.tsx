@@ -101,6 +101,14 @@ function App() {
               >
                 Serviços
               </button>
+              <a
+                href="/support"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+              >
+                Suporte Técnico
+              </a>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
@@ -140,6 +148,14 @@ function App() {
                 >
                   Serviços
                 </button>
+                <a
+                  href="/support"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-left py-2 px-3 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors duration-200 block"
+                >
+                  Suporte Técnico
+                </a>
                 <button 
                   onClick={() => scrollToSection('about')}
                   className="text-left py-2 px-3 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors duration-200"
