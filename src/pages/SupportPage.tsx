@@ -154,7 +154,7 @@ export default function SupportPage() {
                 <Clock className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Atendimento Rápido</h3>
-              <p className="text-gray-600">Resposta em até 2 horas para chamados urgentes</p>
+              <p className="text-gray-600">Resposta em até 5 minutos para chamados urgentes</p>
             </div>
 
             <div className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
