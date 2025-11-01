@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, AlertCircle, Clock, User, Mail, Phone, MessageSquare, Wrench } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import { EMAIL_CONFIG } from '../utils/emailConfig';
 
 interface TicketFormData {
   name: string;
@@ -108,7 +106,7 @@ export default function SupportTicketForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -120,7 +118,10 @@ export default function SupportTicketForm() {
       const ticketId = generateTicketId();
       const currentDate = new Date().toLocaleString('pt-BR');
 
-      const templateParams = {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      const payload = {
         ticket_id: ticketId,
         from_name: formData.name,
         from_email: formData.email,
@@ -131,12 +132,24 @@ export default function SupportTicketForm() {
         subject: formData.subject,
         description: formData.description,
         created_date: currentDate,
-        to_email: 'tarciso@aguiarti.com.br',
-        reply_to: formData.email,
       };
 
-      await emailjs.send(EMAIL_CONFIG.SERVICE_ID, EMAIL_CONFIG.TEMPLATE_ID, templateParams, EMAIL_CONFIG.PUBLIC_KEY);
-      
+      const response = await fetch(
+        `${supabaseUrl}/functions/v1/send-support-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${supabaseAnonKey}`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Erro ao enviar chamado');
+      }
+
       setSubmitStatus('success');
       setFormData({
         name: '',
