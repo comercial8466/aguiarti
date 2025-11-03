@@ -1,12 +1,13 @@
 import React from 'react';
-import { 
-  ArrowLeft, 
-  Clock, 
-  Shield, 
-  Headphones, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
+import { useNavigate } from 'react-router-dom';
+import {
+  ArrowLeft,
+  Clock,
+  Shield,
+  Headphones,
+  CheckCircle,
+  Phone,
+  Mail,
   MessageSquare,
   Monitor,
   Wrench,
@@ -18,15 +19,15 @@ import {
 import SupportTicketForm from '../components/SupportTicketForm';
 
 export default function SupportPage() {
+  const navigate = useNavigate();
+
   const openWhatsApp = () => {
     const whatsappUrl = 'https://api.whatsapp.com/send?phone=5551996668646&text=Gostaria de saber mais sobre os serviços AguiarT.I';
     window.open(whatsappUrl, '_blank');
   };
 
   const goBack = () => {
-    window.close();
-    // Fallback se window.close() não funcionar
-    window.history.back();
+    navigate('/');
   };
 
   return (

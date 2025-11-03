@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { 
-  Menu, 
-  X, 
-  Computer, 
-  Shield, 
-  Zap, 
-  Users, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
+import { useNavigate } from 'react-router-dom';
+import {
+  Menu,
+  X,
+  Computer,
+  Shield,
+  Zap,
+  Users,
+  CheckCircle,
+  Phone,
+  Mail,
   MapPin,
   ArrowRight,
   Monitor,
@@ -22,6 +23,7 @@ import ContactForm from './components/ContactForm';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -101,14 +103,12 @@ function App() {
               >
                 Serviços
               </button>
-              <a
-                href="/support"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => navigate('/support')}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
               >
                 Suporte Técnico
-              </a>
+              </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
@@ -148,14 +148,12 @@ function App() {
                 >
                   Serviços
                 </button>
-                <a
-                  href="/support"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-left py-2 px-3 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors duration-200 block"
+                <button
+                  onClick={() => navigate('/support')}
+                  className="text-left py-2 px-3 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors duration-200 block w-full"
                 >
                   Suporte Técnico
-                </a>
+                </button>
                 <button 
                   onClick={() => scrollToSection('about')}
                   className="text-left py-2 px-3 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors duration-200"
