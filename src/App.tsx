@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import {
   Menu,
   X,
-  Computer,
   Shield,
   Zap,
   Users,
@@ -17,9 +16,14 @@ import {
   Cloud,
   Settings,
   Facebook,
-  Instagram
+  Instagram,
+  Code,
+  Cpu,
+  Lock,
+  TrendingUp
 } from 'lucide-react';
 import ContactForm from './components/ContactForm';
+import AnimatedSection from './components/AnimatedSection';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -173,234 +177,261 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 pb-16 gradient-bg text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Transforme Seu Negócio com
-              <span className="block text-blue-200">Tecnologia Inteligente</span>
-            </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Especialistas em automação comercial e serviços de TI. Oferecemos soluções completas para modernizar e otimizar seus processos empresariais.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => scrollToSection('services')}
-                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-              >
-                Nossos Serviços
-                <ArrowRight className="h-5 w-5" />
-              </button>
-              <button 
-                onClick={openWhatsApp}
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-              >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                  alt="WhatsApp" 
-                  className="h-5 w-5"
+      <section id="home" className="pt-32 pb-20 gradient-bg text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection direction="left" className="space-y-8">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                Transforme Seu Negócio com
+                <span className="block text-blue-100 mt-2">Tecnologia Inteligente</span>
+              </h1>
+              <p className="text-xl text-blue-50 leading-relaxed">
+                Especialistas em automação comercial, suporte técnico e infraestrutura de TI. Oferecemos soluções completas para modernizar e otimizar seus processos empresariais com eficiência e segurança.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                >
+                  Nossos Serviços
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={openWhatsApp}
+                  className="bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="WhatsApp"
+                    className="h-5 w-5"
+                  />
+                  Falar no WhatsApp
+                </button>
+              </div>
+              <div className="flex gap-8 pt-4">
+                <div>
+                  <p className="text-3xl font-bold text-blue-100">500+</p>
+                  <p className="text-blue-100">Clientes Satisfeitos</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-blue-100">10+</p>
+                  <p className="text-blue-100">Anos de Experiência</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-blue-100">24/7</p>
+                  <p className="text-blue-100">Suporte Disponível</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection direction="right" className="hidden lg:block">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl transform rotate-1 opacity-75"></div>
+                <img
+                  src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Tecnologia"
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
-                Falar no WhatsApp
-              </button>
-            </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Nossos Serviços
+          <AnimatedSection direction="up" className="text-center mb-16">
+            <h2 className="section-heading">
+              Nossos Serviços Especializados
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Oferecemos soluções completas em tecnologia para impulsionar seu negócio
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Soluções tecnológicas completas para impulsionar seu negócio com eficiência, segurança e inovação
             </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Automação Comercial */}
-            <div className="bg-white p-8 rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="h-8 w-8 text-blue-600" />
+            <AnimatedSection direction="up" delay={0} className="h-full">
+              <div className="tech-card h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Automação Comercial</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Sistemas completos para PDV, controle de estoque, emissão de NFCe/NFe e gestão financeira integrada.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Sistema PDV integrado e em tempo real</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Controle inteligente de estoque</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Emissão de notas fiscais eletrônicas</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Venda e manutenção de balanças</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Automação Comercial</h3>
-              <p className="text-gray-600 mb-6">
-                Sistemas completos para PDV, controle de estoque, emissão de NFCe/NFe e gestão financeira.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Sistema PDV integrado
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Controle de estoque
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Emissão de notas fiscais
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-8 w-8 text-green-500" />
-                  Venda e Manutenção de Balanças (para Checkouts e Balcão)
-                </li>
-              </ul>
-            </div>
+            </AnimatedSection>
 
             {/* Suporte Técnico */}
-            <div className="bg-white p-8 rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="h-8 w-8 text-green-600" />
+            <AnimatedSection direction="up" delay={100} className="h-full">
+              <div className="tech-card h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-50 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Suporte Técnico Especializado</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Manutenção preventiva e corretiva com infraestrutura completa em segurança, alta disponibilidade e monitoramento 24/7.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Manutenção de sistemas e hardware</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Implantação e configuração de redes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Monitoramento 24/7 de infraestrutura</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Implantação de switches e roteadores</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Suporte remoto e local 24/7</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Suporte Técnico</h3>
-              <p className="text-gray-600 mb-6">
-                Manutenção preventiva e corretiva de computadores, redes e sistemas empresariais. Infraestrutura completa em segurança e alta disponibilidade para o seu sistema, Implantação completa em Redes e Servidores.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Manutenção de sistemas e hardware
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-7 w-7 text-green-500" />
-                 Implantação e Configurações de redes de Computadores
-              </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
-                  Monitoramento de Redes, Desktop e Servidores 
-              </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-9 w-9 text-green-500" />
-                   implantação de switches e roteadores com as melhores marcas do mercado
-              </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
-                   Garantia, segurança e qualidade para a sua rede de computadores e servidores
-              </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-7 w-7 text-green-500" />
-                    Proteja seus ativos com soluções confiáveis e eficientes
-              </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Suporte remoto 24/7
-                </li>
-              </ul>
-            </div>
+            </AnimatedSection>
 
             {/* Infraestrutura */}
-            <div className="bg-white p-8 rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Database className="h-8 w-8 text-purple-600" />
+            <AnimatedSection direction="up" delay={200} className="h-full">
+              <div className="tech-card h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-100 to-cyan-50 rounded-lg flex items-center justify-center mb-6">
+                  <Database className="h-8 w-8 text-cyan-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Infraestrutura de TI</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Planejamento e implementação de infraestrutura robusta, segura e escalável para seu negócio.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Servidores, storage e backup</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Venda de notebooks e computadores</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Switches e roteadores de qualidade</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Monitoramento 24/7 integrado</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Infraestrutura de TI</h3>
-              <p className="text-gray-600 mb-6">
-                Planejamento e implementação de infraestrutura tecnológica robusta e segura.
-              </p>
-              <ul className="space-y-2 text-gray-500">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Servidores e storage
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Backup e segurança
-                </li>
-                 <li className="flex items-center gap-2">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
-                  Venda de Notebook, Computadores e Servidores
-                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
-                  Venda e implantação de switches e roteadores com as melhores marcas do mercado 
-                  </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
-                   Consulte-nos para soluções personalizadas que atendam às suas necessidades 
-                  </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Monitoramento 24/7
-                </li>                
-              </ul>
-            </div>
+            </AnimatedSection>
 
             {/* Consultoria */}
-            <div className="bg-white p-8 rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="h-8 w-8 text-orange-600" />
+            <AnimatedSection direction="up" delay={300} className="h-full">
+              <div className="tech-card h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="h-8 w-8 text-orange-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Consultoria em TI</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Análise estratégica e otimização de processos tecnológicos para maximizar eficiência.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Análise de processos e otimização</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Planejamento estratégico de TI</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Treinamento de equipes</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Consultoria em TI</h3>
-              <p className="text-gray-600 mb-6">
-                Análise e otimização de processos tecnológicos para maximizar eficiência empresarial.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Análise de processos
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Planejamento estratégico
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Treinamento de equipes
-                </li>
-              </ul>
-            </div>
+            </AnimatedSection>
 
             {/* Cloud Computing */}
-            <div className="bg-white p-8 rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <Cloud className="h-8 w-8 text-indigo-600" />
+            <AnimatedSection direction="up" delay={400} className="h-full">
+              <div className="tech-card h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center mb-6">
+                  <Cloud className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Soluções em Nuvem</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Migração e gerenciamento integrado de sistemas em nuvem com flexibilidade e segurança.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Migração para nuvem segura</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Backup e recuperação em nuvem</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Acesso remoto seguro e confiável</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Soluções em Nuvem</h3>
-              <p className="text-gray-600 mb-6">
-                Migração e gerenciamento de sistemas em nuvem para maior flexibilidade e economia.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Migração para nuvem
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Backup em nuvem
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Acesso remoto
-                </li>
-              </ul>
-            </div>
+            </AnimatedSection>
 
             {/* Sistemas Personalizados */}
-            <div className="bg-white p-8 rounded-xl shadow-lg card-hover">
-              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <Settings className="h-8 w-8 text-red-600" />
+            <AnimatedSection direction="up" delay={500} className="h-full">
+              <div className="tech-card h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-rose-50 rounded-lg flex items-center justify-center mb-6">
+                  <Code className="h-8 w-8 text-rose-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Sistemas Personalizados</h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  Desenvolvimento de software customizado para atender necessidades específicas do seu negócio.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Desenvolvimento web avançado</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Aplicações desktop robustas</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Integração de sistemas</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sistemas Personalizados</h3>
-              <p className="text-gray-600 mb-6">
-                Desenvolvimento de software sob medida para atender necessidades específicas do seu negócio.
-              </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Desenvolvimento web
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Aplicações desktop
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
-                  Integração de sistemas
-                </li>
-              </ul>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -577,112 +608,129 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-4 mb-4">
-                <img 
-                  src="/LOGO copy copy copy copy copy copy copy.png" 
-                  alt="AguiarT.I Logo" 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Company Info */}
+            <AnimatedSection direction="up" delay={0} className="lg:col-span-2">
+              <div className="flex items-center space-x-4 mb-6">
+                <img
+                  src="/LOGO copy copy copy copy copy copy copy.png"
+                  alt="AguiarT.I Logo"
                   className="h-12 w-auto"
                 />
-                <div className="flex items-center space-x-2">
+              </div>
+              <p className="text-gray-300 mb-8 leading-relaxed max-w-md">
+                Transformando negócios através de soluções tecnológicas inovadoras. Automação comercial, suporte técnico e infraestrutura de TI de excelência.
+              </p>
+
+              {/* Social Networks Section */}
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-white">Redes Sociais</h4>
+                <div className="flex gap-4">
                   <a
                     href="https://www.facebook.com/aguiartiad"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-blue-400 hover:text-blue-300 hover:bg-gray-800 rounded-full transition-all duration-200"
+                    className="w-12 h-12 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-110"
                     aria-label="Facebook da AguiarT.I"
                   >
-                    <Facebook className="h-5 w-5" />
+                    <Facebook className="h-6 w-6" />
                   </a>
                   <a
                     href="https://www.instagram.com/aguiar_ti/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-pink-400 hover:text-pink-300 hover:bg-gray-800 rounded-full transition-all duration-200"
+                    className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-110"
                     aria-label="Instagram da AguiarT.I"
                   >
-                    <Instagram className="h-5 w-5" />
+                    <Instagram className="h-6 w-6" />
                   </a>
                 </div>
               </div>
-              <p className="text-gray-400 mb-6 max-w-md">
-                Transformando negócios através de soluções tecnológicas inovadoras. Automação comercial e serviços de TI de qualidade.
-              </p>
-              <div className="flex flex-col space-y-2">
-                <div className="flex items-center space-x-4">
-                  <Phone className="h-5 w-5 text-blue-400" />
-                  <a 
-                    href="tel:+5551996668646" 
-                    className="text-gray-400 hover:text-white transition-colors"
+            </AnimatedSection>
+
+            {/* Services */}
+            <AnimatedSection direction="up" delay={100}>
+              <h4 className="text-lg font-semibold mb-6 text-white">Serviços</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <button
+                    onClick={() => scrollToSection('services')}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    Automação Comercial
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => navigate('/support')}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    Suporte Técnico
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('services')}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    Infraestrutura de TI
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('services')}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    Consultoria
+                  </button>
+                </li>
+              </ul>
+            </AnimatedSection>
+
+            {/* Contact */}
+            <AnimatedSection direction="up" delay={200}>
+              <h4 className="text-lg font-semibold mb-6 text-white">Contato</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-blue-400" />
+                  <a
+                    href="tel:+5551996668646"
+                    className="hover:text-white transition-colors"
                   >
                     (51) 99666-8646
                   </a>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                    alt="WhatsApp" 
-                    className="h-5 w-5"
-                  />
-                  <button 
-                    onClick={openWhatsApp}
-                    className="text-gray-400 hover:text-green-400 transition-colors"
-                  >
-                    WhatsApp
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Serviços</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Automação Comercial</li>
-                <li>Suporte Técnico</li>
-                <li>Infraestrutura de TI</li>
-                <li>Consultoria</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contato</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a 
-                    href="mailto:tarciso@aguiarti.com.br" 
+                </li>
+                <li className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 text-blue-400" />
+                  <a
+                    href="mailto:tarciso@aguiarti.com.br"
                     className="hover:text-white transition-colors"
                   >
                     tarciso@aguiarti.com.br
                   </a>
                 </li>
-                <li>
-                  <a 
-                    href="mailto:comercial@aguiarti.com.br" 
-                    className="hover:text-white transition-colors"
-                  >
-                    comercial@aguiarti.com.br
-                  </a>
+                <li className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-blue-400" />
+                  <span>Viamão, RS</span>
                 </li>
-                <li>
-                  <a 
-                    href="tel:+5551996668646" 
-                    className="hover:text-white transition-colors"
-                  >
-                    (51) 99666-8646
-                  </a>
-                </li>
-                <li>VIAMÃO, RS</li>
               </ul>
-            </div>
+            </AnimatedSection>
           </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">
+
+          {/* Divider */}
+          <div className="border-t border-gray-700 my-8"></div>
+
+          {/* Bottom */}
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
               © 2024 AguiarT.I. Todos os direitos reservados.
             </p>
+            <div className="flex gap-6 mt-4 sm:mt-0 text-sm text-gray-400">
+              <a href="#" className="hover:text-white transition-colors">Privacidade</a>
+              <a href="#" className="hover:text-white transition-colors">Termos</a>
+            </div>
           </div>
         </div>
       </footer>

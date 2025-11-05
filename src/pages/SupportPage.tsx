@@ -8,15 +8,14 @@ import {
   CheckCircle,
   Phone,
   Mail,
-  MessageSquare,
-  Monitor,
-  Wrench,
-  Users,
-  Zap,
   Facebook,
-  Instagram
+  Instagram,
+  Zap,
+  Lock,
+  TrendingUp
 } from 'lucide-react';
 import SupportTicketForm from '../components/SupportTicketForm';
+import AnimatedSection from '../components/AnimatedSection';
 
 export default function SupportPage() {
   const navigate = useNavigate();
@@ -99,28 +98,31 @@ export default function SupportPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/10 p-4 rounded-full">
-                <Headphones className="h-12 w-12" />
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 right-5 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <AnimatedSection direction="down" className="text-center space-y-8">
+            <div className="flex justify-center mb-4">
+              <div className="w-20 h-20 bg-white/10 backdrop-blur-sm p-4 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <Headphones className="h-12 w-12 mx-auto" />
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Suporte Técnico AguiarT.I
+            <h1 className="text-4xl sm:text-5xl font-bold">
+              Suporte Técnico Especializado
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Atendimento especializado em tecnologia para empresas. Nossa equipe está pronta para resolver seus problemas técnicos com rapidez e eficiência.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              Atendimento profissional em tecnologia. Nossa equipe experiente está pronta para resolver seus problemas com rapidez, eficiência e excelência.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <button
                 onClick={openWhatsApp}
                 className="bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                  alt="WhatsApp" 
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
                   className="h-5 w-5"
                 />
                 Suporte Imediato
@@ -129,11 +131,11 @@ export default function SupportPage() {
                 href="#ticket-form"
                 className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
-                <Wrench className="h-5 w-5" />
+                <Zap className="h-5 w-5" />
                 Abrir Chamado
               </a>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
