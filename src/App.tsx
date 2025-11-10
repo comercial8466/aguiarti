@@ -231,7 +231,7 @@ function App() {
             <AnimatedSection direction="right" className="hidden lg:block">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl transform rotate-1 opacity-75"></div>
-                <img
+                <-img
                   src="htt://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w="
                   alt=""
                   class"Name=relative rounded-2xl shadow-2xl w-full h-auto object-cover"
